@@ -2,11 +2,12 @@ package ru.job4j.condition;
 
 public class TrgArea {
 
+    @SuppressWarnings("checkstyle:WhitespaceAround")
     public static double area(double a, double b, double c) {
 
-        double p = (a+b+c)/2;
+        double p = (a + b + c) / 2;
 
-        double rsl = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        double rsl = Math.sqrt(p * (p - a) * (p - b) * (p - c));
         return rsl;
     }
 
@@ -16,7 +17,7 @@ public class TrgArea {
          int c = 2;
 
          double rsl = TrgArea.area(a, b, c);
-         System.out.println("area ("+ a +", "+ b +", "+ c +") = " + rsl);
+         System.out.println("area (" + a + ", " + b + ", " + c + ") = " + rsl);
     }
 
 }
