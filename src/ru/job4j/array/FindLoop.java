@@ -2,10 +2,14 @@ package ru.job4j.array;
 
 public class FindLoop {
 
-
+    /**
+     *
+     * @param data - Массив
+     * @param el - Искомый элемент
+     * @return int - Индекс элемента "el" массива data
+     */
 
     public int indexOf(int[] data, int el) {
-
         int rst = -1; // если элемента нет в массиве, то возвращаем -1.
         for (int index = 0; index < data.length; index++) {
             if (data[index] == el) {
@@ -16,6 +20,14 @@ public class FindLoop {
         return rst;
     }
 
+    /**
+     *
+     * @param data - Массив
+     * @param el - Искомый элемент
+     * @param start - Начальный индекс
+     * @param finish - Конечный индекс
+     * @return int - Индекс элемента "el" массива data в диапазоне start - finish
+     */
     public static int indexOf(int[] data, int el, int start, int finish) {
         int rst = -1; // если элемента нет в массиве, то возвращаем -1.
         for (int i = start; i <= finish; i++) {
