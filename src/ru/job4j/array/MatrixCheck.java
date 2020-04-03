@@ -25,7 +25,6 @@ public class MatrixCheck {
      * @param column - индекс проверяемой колонки
      * @return boolean - весь столбец "column" массива "board" заполнен символом "Х"
      */
-
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
         for (int i = 0; i < board.length; i++) {
@@ -35,5 +34,18 @@ public class MatrixCheck {
             }
         }
         return result;
+    }
+
+    /**
+     *
+     * @param board  - вумерный массив
+     * @return - array[] - диагональ массива "board"
+     */
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+        return rsl;
     }
 }
