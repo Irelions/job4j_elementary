@@ -2,6 +2,12 @@ package ru.job4j.array;
 
 public class Matrix {
 
+    /**
+     *
+     * @param size - размер двумерного массива
+     * @return array[][] - заполненный значеинями массив (номер строки * номер столбца)
+     */
+
     public int[][] multiple(int size) {
 
         int[][] table = new int[size][size];
