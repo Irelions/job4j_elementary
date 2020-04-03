@@ -21,7 +21,7 @@ public class MatrixCheck {
 
     /**
      *
-     * @param board - вумерный массив
+     * @param board - двумерный массив
      * @param column - индекс проверяемой колонки
      * @return boolean - весь столбец "column" массива "board" заполнен символом "Х"
      */
@@ -38,7 +38,7 @@ public class MatrixCheck {
 
     /**
      *
-     * @param board  - вумерный массив
+     * @param board  - двумерный массив
      * @return - array[] - диагональ массива "board"
      */
     public static char[] extractDiagonal(char[][] board) {
@@ -47,5 +47,21 @@ public class MatrixCheck {
             rsl[i] = board[i][i];
         }
         return rsl;
+    }
+
+    /**
+     *
+     * @param board - двумерный массив
+     * @return boolean - Проверка на наличие полностью заполненной строки или столбца сиволом "X"
+     */
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+            if (monoHorizontal(board, i) || monoVertical(board, i)) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 }
