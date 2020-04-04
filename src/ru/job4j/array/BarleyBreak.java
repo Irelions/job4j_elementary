@@ -14,5 +14,11 @@ public class BarleyBreak {
                 table[i][j] = count;
             }
         }
+
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                System.out.println(table[i][j]);
+            }
+        }
     }
 }
