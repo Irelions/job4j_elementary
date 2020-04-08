@@ -8,11 +8,10 @@ public class PointTest {
     @Test
     public void distance() {
 
-        int inX1 = 0;
-        int inX2 = 0;
-        int inY1 = 2;
-        int inY2 = 0;
-        double out = Point.distance(inX1, inY1, inX2, inY2);
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+
+        double out = a.distance(b);
 
         double expected = 2.0;
         Assert.assertEquals(expected, out, 0.01);
