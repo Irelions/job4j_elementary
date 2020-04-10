@@ -1,8 +1,7 @@
 package ru.job4j.condition;
 
+import org.junit.Assert;
 import org.junit.Test;
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
 
 public class TriangleTest {
     @Test
@@ -11,9 +10,10 @@ public class TriangleTest {
         Point b = new Point(3, 6);
         Point c = new Point(5, 1);
 
-        Triangle triangle = new Triangle(a, b, c);
+        TrgArea triangleArea = new TrgArea(a, b, c);
 
-        boolean expected = triangle.exist();
-        assertThat(expected, is(true));
+        double expected = triangleArea.area();
+        double out = 73.85;
+        Assert.assertEquals(expected, out, 0.01);
     }
 }
